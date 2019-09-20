@@ -1,0 +1,25 @@
+<view class="topBar">
+  <view wx:for="{{newsBar}}" wx:key="item" bindtap="newsClick" data-type="{{item.type}}" class="{{activeIndex==index ?'activ':' '}}" data-index="{{index}}">{{item.title}}</view>
+</view>
+<view class="hot-news" style="background-image: url({{backgroundImg}})">
+  <view class="hot">热门</view>
+  <view class="news-content">
+    <view class="news-title">{{randomTitle}}</view>
+      <view class="news-st">
+        <view class="news-source">{{randomSource}}</view>
+        <view class="news-time">{{randomTime}}</view>
+      </view>
+  </view>
+</view>
+<view class="news-list">
+  <view wx:for="{{newsList}}" wx:key="item" class="news-item" bindtap="openNews" data-index="{{item.id}}">
+    <view class="news-content">
+      <view class="news-title">{{item.title}}</view>
+      <view class="news-st">
+        <view class="news-source">{{item.source}}</view>
+        <view class="news-time">{{item.time}}</view>
+      </view>
+    </view>
+    <image class="news-img" src="{{item.img}}"></image>
+  </view>
+</view>
