@@ -1,11 +1,12 @@
 <view class="detail-title">{{detailTitle}}</view>
 <view class="detail-str">
-  <view class="detail-source">{{detailSource}}</view>
+  <view class="detail-source">{{detailSource ? detailSource : "快读资讯"}}</view>
   <view class="detail-time">{{detailTime}}</view>
   <view class="detail-read">{{detailRead}}</view>
 </view>
 
 <view class="content" wx:for="{{newsContent}}" wx:key="{{item}}">
   <view wx:if="{{item.type=='p'}}">{{item.text}}</view>
-  <image wx:if="{{item.type=='image'}}" src="{{item.src}}" class="deatail-img"></image>
+  <image wx:elif="{{item.type=='image'}}" src="{{item.src}}" class="deatail-img"></image>
+  <view wx:else class="text-else">{{item.text}}</view>
 </view>
