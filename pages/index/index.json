@@ -1,9 +1,3 @@
-{
-  "usingComponents": {},
-  "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#35A3E6",
-    "navigationBarTitleText": "快读·资讯",
-    "navigationBarTextStyle": "white"
-  }
+ {
+  "enablePullDownRefresh": true
 }
